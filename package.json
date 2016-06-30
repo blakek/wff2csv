@@ -1,0 +1,23 @@
+{
+  "name": "wff2csv",
+  "version": "1.0.0",
+  "description": "Converts WiFiFoFum kml files to CSV logs",
+  "main": "wff2csv.js",
+  "dependencies": {
+    "json2csv": "^2.2.1",
+    "togeojson": "^0.10.1",
+    "xmldom": "^0.1.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WiFiFoFum",
+    "kml",
+    "wardriving",
+    "wardrive"
+  ],
+  "author": "Blake Knight <oss.ideas@gmail.com>",
+  "license": "Apache 2"
+}
