@@ -1,6 +1,6 @@
 {
   "name": "wff2csv",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Convert WiFiFoFum KML files to CSV logs (e.g. for data visualization)",
   "main": "wff2csv.js",
   "bin": "./wff2csv.js",
