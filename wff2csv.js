@@ -7,15 +7,15 @@ const inputFile = process.argv[2]
 
 // Check that we were given a file as an argument before continuing
 if (!inputFile || !fs.existsSync(inputFile)) {
-	console.log('Usage: wff2csv <WiFiFoFum KML file>')
-	process.exit(1)
+  console.log('Usage: wff2csv <WiFiFoFum KML file>')
+  process.exit(1)
 }
 
 wffParser
-	.parseFile(inputFile)
-	.then(hotspots => json2csv({
-		data: hotspots,
-		fields: fieldNames
-	}))
-	.then(csv => console.log(csv))
-	.catch(error => console.error(error))
+  .parseFile(inputFile)
+  .then(hotspots => json2csv({
+    data: hotspots,
+    fields: fieldNames
+  }))
+  .then(csv => console.log(csv))
+  .catch(error => console.error(error))
