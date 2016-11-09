@@ -12,6 +12,10 @@ Convert the WiFiFoFum KML files to a CSV:
 wff2csv WiFiFoFum_Log_586.kml > wifi.csv
 ```
 
+Then, you can choose your own way of dealing with data.  For example, you can make an easy visualization using [Google My Maps](https://www.google.com/mymaps):
+
+![Example screenshot](https://raw.githubusercontent.com/blakek/wff2csv/master/example.png)
+
 ## API
 
 If you want to write a different conversion (e.g. to JSON), there is a separate `wffParser.js` file you can take advantage of.
