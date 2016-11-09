@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Convert WiFiFoFum KML files to CSV logs (e.g. for data visualization)",
   "main": "wff2csv.js",
+  "bin": "./wff2csv.js",
   "dependencies": {
     "json2csv": "^3.7.1",
     "pify": "^2.3.0",

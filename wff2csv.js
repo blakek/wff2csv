@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fieldNames = require('./config').fieldNames
 const fs = require('fs')
 const json2csv = require('json2csv')
