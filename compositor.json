@@ -1,0 +1,97 @@
+{
+  "name": "blakek/wff2csv",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "master",
+  "style": {
+    "name": "Future",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Avenir Next\", Helvetica, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.2em"
+    },
+    "alternativeText": {
+      "textTransform": "uppercase",
+      "fontWeight": 400,
+      "letterSpacing": "0.2em",
+      "opacity": 0.75
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    },
+    "layout": {
+      "centered": true,
+      "maxWidth": 1024,
+      "bannerHeight": "80vh"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/blakek/wff2csv",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/wff2csv",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "wff2csv",
+      "subhead": "Converts WiFiFoFum kml files to CSV logs",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "wff2csv: Converts WiFiFoFum kml files to CSV logs",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "blakek",
+          "repo": "wff2csv"
+        }
+      ],
+      "text": "v2.1.4"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<blockquote>\n<p>Convert WiFiFoFum KML files to CSV logs (e.g. for data visualization)</p>\n</blockquote>\n<p>I had a homework assignment in a security class to just go wardriving and see what interesting patterns could be found.  With an old iPhone 3GS I got got for $15, I just drove around town and collected hotspot data and geolocations.  However, I couldn&apos;t interact with it the way I wanted...  So, I wrote this to convert the KML-ish output to a CSV that can be used for data visualization.</p>\n<h2>Usage</h2>\n<p>Convert the WiFiFoFum KML files to a CSV:</p>\n<pre>$ wff2csv WiFiFoFum_Log_586.kml &gt; wifi.csv</pre><p>Outputs these fields:</p>\n<ul>\n<li>ESSID</li>\n<li>MAC Address</li>\n<li>Channel</li>\n<li>Security</li>\n<li>Type</li>\n<li>Latitude</li>\n<li>Longitude</li>\n<li>Elevation</li>\n</ul>\n<p>Then, you can choose your own way of dealing with data.  For example, you can easily create a visualization using <a href=\"https://www.google.com/mymaps\">Google My Maps</a>:</p>\n<p><img src=\"https://raw.githubusercontent.com/blakek/wff2csv/master/example.png\"></p>\n<h2>API</h2>\n<p>If you want to write a different conversion (e.g. to JSON), there is a separate <code>wffParser.js</code> file you can take advantage of.</p>\n<p>Parse a WFF KML file:</p>\n<pre><span class=\"hljs-comment\">// parser is installed with wff2csv</span>\n<span class=\"hljs-keyword\">const</span> wffParser = <span class=\"hljs-built_in\">require</span>(<span class=\"hljs-string\">&apos;wff2csv/wffParser&apos;</span>)\n\n<span class=\"hljs-keyword\">const</span> wifiData = wffParser\n  .parseFile(<span class=\"hljs-string\">&apos;WiFiFoFum_Log_586.kml&apos;</span>)\n  .then(<span class=\"hljs-function\"><span class=\"hljs-params\">data</span> =&gt;</span> <span class=\"hljs-built_in\">console</span>.log(data))</pre><p>Logs:</p>\n<pre>[{\n  <span class=\"hljs-attr\">essid</span>: <span class=\"hljs-string\">&apos;&apos;</span>,\n  <span class=\"hljs-attr\">macAddress</span>: <span class=\"hljs-string\">&apos;&apos;</span>,\n  <span class=\"hljs-attr\">channel</span>: <span class=\"hljs-string\">&apos;&apos;</span>,\n  <span class=\"hljs-attr\">security</span>: <span class=\"hljs-string\">&apos;&apos;</span>,\n  <span class=\"hljs-attr\">type</span>: <span class=\"hljs-string\">&apos;&apos;</span>,\n  <span class=\"hljs-attr\">latitude</span>: <span class=\"hljs-string\">&apos;&apos;</span>,\n  <span class=\"hljs-attr\">longitude</span>: <span class=\"hljs-string\">&apos;&apos;</span>,\n  <span class=\"hljs-attr\">elevation</span>: <span class=\"hljs-string\">&apos;&apos;</span>\n}]</pre><h2>Install</h2>\n<p>With <a href=\"https://npmjs.org/\">npm</a> installed:</p>\n<p>Install for system-wide usage:</p>\n<pre>$ npm install -g wff2csv</pre><p>Install for API/parser usage:</p>\n<pre>$ npm install --save wff2csv</pre><h2>License</h2>\n<p>MPL-2.0</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/blakek/wff2csv",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/blakek",
+          "text": "blakek"
+        }
+      ]
+    }
+  ]
+}
